@@ -42,10 +42,17 @@ document.querySelector('#cards').onclick = () => {
         "li");
 
 
-    [...lis].forEach(element => { element.style.display = "none"; })
+    [...lis].forEach(element => { element.style.display = "none"; });
 
     let parentSelector = document.querySelector('#cards');
     // we want to make sure we get a random number between 1 and the number of child.
+
+    var allCards = document.querySelectorAll("li");
+
+    for (let i = 0; i < allCards.length; i++) {
+        allCards[i].style.backgroundColor = "red";
+    }
+
 
     if (parentSelector.childElementCount === 1) {
         var li = document.createElement('li');
@@ -99,6 +106,8 @@ function getContrastYIQ(hexcolor) {
     var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
     return (yiq >= 128) ? 'black' : 'white';
 }
+
+
 
 
 
