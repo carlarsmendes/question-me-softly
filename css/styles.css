@@ -25,13 +25,15 @@ body {
   background-color: #70FFBF;
   width:100vw;
   height:100vh;
+  overflow: scroll;
 }
 
 
 #cards li {
 	list-style: none;
   height:fit-content;
-  max-width:60vw;
+  max-width:70vw;
+  overflow: scroll;
 	text-align: center;
 	line-height: 2rem;
 	font-size: 2rem;
@@ -46,6 +48,7 @@ body {
     text-transform: uppercase;
     font-weight:500;
     font-size:16px;
+    line-height:20px;
 }
 
 #cards li#startingQuestion {
@@ -68,20 +71,39 @@ body {
   cursor: pointer;
 }
 
+#questionMark.showModal {
+  font-size: 2.5rem;
+  border-radius: 0;
+  padding:15px 30px;
+  position:relative;
+  right:0;
+  top:0;
+  margin:0;
+  text-align: right;
+}
+
 #helpModal {
   display:none;
   background-color: #3f3f3f;
-  width:85vw;
+  width:100vw;
   height:auto;
+  height:100vh;
   z-index:3;
   color:#fff;
-  border-radius:1rem;
+  /*border-radius:1rem;*/
   position:absolute;
-  left:20px;
-  padding:20px;
-  margin:20px auto;
+  overflow: scroll;
+  /*top:40px;
+  left:20px;*/
+  padding:0px 20px 30px;
+  margin:0px auto;
   font-size:18px;
   font-weight:400;
+  line-height: 1.7rem;;
+  flex-direction: column;
+  justify-content:space-between
+
+
 }
 
 /*button.btn {

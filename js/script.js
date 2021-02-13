@@ -84,7 +84,7 @@ questionMark.onclick = () => {
 
     } else {
         questionMark.classList.add('showModal');
-        helpModal.style.display = "inline";
+        helpModal.style.display = "flex";
         questionMark.innerHTML = "x";
     }
 
