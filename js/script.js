@@ -49,9 +49,10 @@ document.querySelector('#cards').onclick = () => {
 
     var allCards = document.querySelectorAll("li");
 
+    /*
     for (let i = 0; i < allCards.length; i++) {
         allCards[i].style.backgroundColor = "red";
-    }
+    }*/
 
 
     if (parentSelector.childElementCount === 1) {
