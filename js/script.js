@@ -59,7 +59,7 @@ document.querySelector('#cards').onclick = () => {
         let random = Math.floor(1 + Math.random() * parentSelector.childElementCount);
 
         let child = document.querySelector('.parent>li:nth-child(' + random + ')');
-        console.log("child here",child);
+        
         if (child) {
             //console.log(child);
             child.style.display = "inline";
