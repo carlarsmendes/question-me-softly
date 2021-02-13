@@ -41,23 +41,29 @@ body {
   display:none;
 }
 
+#cards li h4 {
+	margin-top:50px;
+    text-transform: uppercase;
+    font-weight:500;
+    font-size:16px;
+}
+
 #cards li#startingQuestion {
   display:inline;
 }
 
 
-
 #questionMark {
   font-size: 2.5rem;
   border-radius: 4rem;
-  background-color: #000;
+  background-color: #3f3f3f;
   color:#fff;
   padding:15px 30px;
   position:fixed;
   right:0;
   top:0;
   margin:20px;
-  z-index:2;
+  z-index:4;
   text-align:center;
   cursor: pointer;
 }
@@ -67,7 +73,7 @@ body {
   background-color: #3f3f3f;
   width:85vw;
   height:auto;
-  z-index:4;
+  z-index:3;
   color:#fff;
   border-radius:1rem;
   position:absolute;
