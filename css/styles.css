@@ -33,7 +33,7 @@ body {
 	list-style: none;
     height:fit-content;
     max-width:70vw;
-    overflow: scroll;
+    overflow: auto;
 	text-align: center;
 	line-height: 2.5rem;
 	font-size: 2rem;
