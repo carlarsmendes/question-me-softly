@@ -26,7 +26,7 @@ for (let i = 0; i < questionArray.length; i++) {
     li.appendChild(document.createTextNode(questionArray[i].question));
     ul.appendChild(li);
     var h = document.createElement("H4");             // Create a <h1> element
-    var t = document.createTextNode("- " + questionArray[i].type + " -");     // Create a text node
+    var t = document.createTextNode(questionArray[i].type);     // Create a text node
     h.appendChild(t); 
     li.appendChild(h);
 }
@@ -47,17 +47,17 @@ document.querySelector('#cards').onclick = () => {
     let parentSelector = document.querySelector('#cards');
     // we want to make sure we get a random number between 1 and the number of child.
 
-    var allCards = document.querySelectorAll("li");
+    
 
     /*
     for (let i = 0; i < allCards.length; i++) {
         allCards[i].style.backgroundColor = "red";
     }*/
 
-
+    //When there are no more questions show this message
     if (parentSelector.childElementCount === 1) {
         var li = document.createElement('li');
-        li.appendChild(document.createTextNode("You reached the end of the game!"));
+        li.appendChild(document.createTextNode("You reached the end of the game! Start again by refreshing the page."));
         ul.appendChild(li);
         li.style.display = "inline";
     }
@@ -77,7 +77,7 @@ document.querySelector('#cards').onclick = () => {
     }
 };
 
-
+//For the help modal
 let questionMark = document.querySelector('#questionMark');
 
 questionMark.onclick = () => {
@@ -98,7 +98,8 @@ questionMark.onclick = () => {
 
 };
 
-//Gotten from Stack Overflow
+//Gotten from Stack Overflow - Get contrast right depending on color
+//Result is white or black
 function getContrastYIQ(hexcolor) {
     hexcolor = hexcolor.replace("#", "");
     var r = parseInt(hexcolor.substr(0, 2), 16);
@@ -107,8 +108,25 @@ function getContrastYIQ(hexcolor) {
     var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
     return (yiq >= 128) ? 'black' : 'white';
 }
+let allCards = document.querySelectorAll("li");
 
-
+//For each li card, background color 
+allCards.forEach(card => {
+    let typeText = card.getElementsByTagName("h4")[0];
+    
+    //card.parentNode.style.backgroundColor = "purple";
+    colorsData.forEach(
+        colorCombo =>  {
+            console.log("typeText", typeText);
+            console.log("colorCombo", colorCombo.type);
+            if (typeText == colorCombo.type){
+                console.log(card.parentNode.style.backgroundColor); 
+                card.parentNode.style.backgroundColor = colorCombo.color;
+                card.style.fontColor = getContrastYIQ(`${colorCombo.color}`);
+            }
+            }
+    );
+});
 
 
 

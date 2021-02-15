@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  margin:0;
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
 }
+
 body {
 	padding: 0;
 	margin: 0;
@@ -11,8 +12,7 @@ body {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-  padding:0;
-  
+    padding:0;
 }
 
 #cards {
@@ -31,16 +31,23 @@ body {
 
 #cards li {
 	list-style: none;
-  height:fit-content;
-  max-width:70vw;
-  overflow: scroll;
+    height:fit-content;
+    max-width:70vw;
+    overflow: scroll;
 	text-align: center;
-	line-height: 2rem;
+	line-height: 2.5rem;
 	font-size: 2rem;
-	
 	top: 0;
 	left: 0;
   display:none;
+}
+
+#cards li h2 {
+	line-height: 4rem;
+
+	top: 0;
+	left: 0;
+  
 }
 
 #cards li h4 {
