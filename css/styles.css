@@ -39,7 +39,7 @@ body {
 	font-size: 2rem;
 	top: 0;
 	left: 0;
-  display:none;
+  /*display:none;*/
 }
 
 #cards li h2 {

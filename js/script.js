@@ -1,81 +1,44 @@
 import { colorsData } from './colorsData.js';
 import { questions } from './questionsData.js';
 
-/*
-let questionArray = [
-    "What’s your favorite way to spend a day off?",
-    "What was the best vacation you ever took and why?",
-    "What was your favorite age growing up?",
-    "What's the best joke you've ever heard?",
-    "Is there any product that you couldn't live without?",
-    "If you could have any exotic animal as a pet, which would it be?",
-    "How would your 10-year-old self react to what you do now?",
-    "What’s the worst career decision you’ve ever made?", "What do you think about workaholics?"
-];*/
-
 let questionArray = [...questions];
 
-let colorsArray = ["#1B75BC", "#2CA58D", "#84BC9C", "#FFFDF7", "#7E2E84"];
+//let colorsArray = ["#1B75BC", "#2CA58D", "#84BC9C", "#FFFDF7", "#7E2E84"];
 
 var ul = document.getElementById("cards");
 
 
-for (let i = 0; i < questionArray.length; i++) {
+document.querySelector('#cards').onclick = () => {
+
+    let firstLI = document.getElementsByTagName("li")[0];
+    firstLI.remove();
+
+    let randomSlideNumber = Math.floor(Math.random() * questionArray.length); //returns integrer from 0 to 9
 
     var li = document.createElement('li');
-    li.appendChild(document.createTextNode(questionArray[i].question));
+    li.appendChild(document.createTextNode(questionArray[randomSlideNumber].question));
     ul.appendChild(li);
-    var h = document.createElement("H4");             // Create a <h1> element
-    var t = document.createTextNode(questionArray[i].type);     // Create a text node
-    h.appendChild(t); 
-    li.appendChild(h);
+    var h4 = document.createElement("H4");             // Create a <h1> element
+    var question = document.createTextNode(questionArray[randomSlideNumber].type);     // Create a text node
+    h4.appendChild(question); 
+    li.appendChild(h4);
+
+    let typeText = document.getElementsByTagName("H4")[0].innerHTML;
+
+
+    colorsData.forEach(
+        colorCombo =>  {
+            
+            if (typeText === colorCombo.type){
+                li.parentNode.style.backgroundColor = `${colorCombo.color}`;
+                li.style.color = getContrastYIQ(`${colorCombo.color}`);
+            }
+            }
+    );
+
 }
 
 
-let randomSlideNumber = Math.floor(Math.random() * questionArray.length); //returns integrer from 0 to 9
-
-
-document.querySelector('#cards').onclick = () => {
-
-
-    var lis = document.getElementById("cards").getElementsByTagName(
-        "li");
-
-
-    [...lis].forEach(element => { element.style.display = "none"; });
-
-    let parentSelector = document.querySelector('#cards');
-    // we want to make sure we get a random number between 1 and the number of child.
-
-    
-
-    /*
-    for (let i = 0; i < allCards.length; i++) {
-        allCards[i].style.backgroundColor = "red";
-    }*/
-
-    //When there are no more questions show this message
-    if (parentSelector.childElementCount === 1) {
-        var li = document.createElement('li');
-        li.appendChild(document.createTextNode("You reached the end of the game! Start again by refreshing the page."));
-        ul.appendChild(li);
-        li.style.display = "inline";
-    }
-    else {
-        parentSelector.removeChild(parentSelector.childNodes[0]);
-
-        let random = Math.floor(1 + Math.random() * parentSelector.childElementCount);
-
-        let child = document.querySelector('.parent>li:nth-child(' + random + ')');
-        
-        if (child) {
-            //console.log(child);
-            child.style.display = "inline";
-        }
-
-
-    }
-};
 
 //For the help modal
 let questionMark = document.querySelector('#questionMark');
@@ -110,23 +73,6 @@ function getContrastYIQ(hexcolor) {
 }
 let allCards = document.querySelectorAll("li");
 
-//For each li card, background color 
-allCards.forEach(card => {
-    let typeText = card.getElementsByTagName("h4")[0];
-    
-    //card.parentNode.style.backgroundColor = "purple";
-    colorsData.forEach(
-        colorCombo =>  {
-            console.log("typeText", typeText);
-            console.log("colorCombo", colorCombo.type);
-            if (typeText == colorCombo.type){
-                console.log(card.parentNode.style.backgroundColor); 
-                card.parentNode.style.backgroundColor = colorCombo.color;
-                card.style.fontColor = getContrastYIQ(`${colorCombo.color}`);
-            }
-            }
-    );
-});
 
 
 

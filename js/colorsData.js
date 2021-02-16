@@ -1,25 +1,25 @@
 export let colorsData= [
     {
         "type": "Family",
-        "color":"1B75BC"
+        "color":"#ADF7B6"
     }, {
         "type": "Unconventional questions",
-        "color": "#2E294E" 
+        "color": "#F06449" 
     },
     {
         "type": "Dreams",
-        "color": "#EFBCD5"
+        "color": "#F6AE2D"
     },
     {
         "type": "Values",
-        "color": "#BE97C6"
+        "color": "#0F7173"
     },
     {
         "type": "Career",
-        "color": "#49BEAA"
+        "color": "#4E4187"
     },
     {
         "type": "Likes and Dislikes",
-        "color": "#49DCB1"
+        "color": "#963484"
     }
 ];
