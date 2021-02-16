@@ -8,11 +8,12 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
 .gallery {
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
-    padding:0;
+	min-height: 100vh;
+  padding:0;
 }
 
 #cards {
@@ -24,21 +25,25 @@ body {
   align-items:center;
   background-color: #70FFBF;
   width:100vw;
-  height:100vh;
-  overflow: scroll;
+  min-height:100vh;
+  
 }
 
 
 #cards li {
 	list-style: none;
-    height:fit-content;
+    min-height:100vh;
     max-width:70vw;
     overflow: auto;
 	text-align: center;
 	line-height: 2.5rem;
 	font-size: 2rem;
 	top: 0;
-	left: 0;
+  left: 0;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:center;
+  align-items:center;
   /*display:none;*/
 }
 
@@ -59,7 +64,7 @@ body {
 }
 
 #cards li#startingQuestion {
-  display:inline;
+  display:flex;
 }
 
 
@@ -82,7 +87,7 @@ body {
   font-size: 2.5rem;
   border-radius: 0;
   padding:15px 30px;
-  position:relative;
+  position:fixed;
   right:0;
   top:0;
   margin:0;
@@ -93,32 +98,57 @@ body {
   display:none;
   background-color: #3f3f3f;
   width:100vw;
-  height:auto;
-  height:100vh;
+  /*height:auto;*/
+  min-height:100vh;
   z-index:3;
   color:#fff;
   /*border-radius:1rem;*/
   position:absolute;
-  overflow: scroll;
+  /*overflow-y: scroll;*/
   /*top:40px;
   left:20px;*/
-  padding:0px 20px 30px;
+  padding:0px 20px 0px;
   margin:0px auto;
   font-size:18px;
   font-weight:400;
   line-height: 1.7rem;
   flex-direction: column;
-  justify-content:space-between
-
-
+  justify-content:center;
+  align-items: center;
 }
 
-/*button.btn {
-  position:fixed;
-  z-index:2;
-  background-color:grey;
-  color:white;
-  padding:20px;
-  border-radius:20px;
-}*/
+#helpModal .content {
+  max-width:70vw;
+  margin:0 auto;
+  text-align:left;
+  padding-top:40px;
+}
 
+
+@media only screen and (max-width: 600px) {
+  #helpModal {
+    height:auto;
+    padding:50px 20px;
+    margin:0px auto;
+    font-size:18px;
+    font-weight:400;
+    line-height: 1.7rem;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  #helpModal .content {
+    max-width:95vw;
+    font-size:22px;
+    line-height:28px;
+    
+  }
+
+  #cards li {
+    padding: 120px 0;
+    max-width:85vw;
+  }
+
+  
+}
