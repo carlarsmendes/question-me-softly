@@ -3,9 +3,16 @@ import { questions } from './questionsData.js';
 
 let questionArray = [...questions];
 
-//let colorsArray = ["#1B75BC", "#2CA58D", "#84BC9C", "#FFFDF7", "#7E2E84"];
+let colorsArray = colorsData.map(colorObject=> colorObject.color);
 
 var ul = document.getElementById("cards");
+
+//Random color for the first opening slide
+let openingSlide = document.getElementById("startingQuestion");
+let randomColorIndex = Math.floor(Math.random() * colorsArray.length);
+openingSlide.parentNode.style.backgroundColor = colorsArray[randomColorIndex];
+openingSlide.style.color = getContrastYIQ(`${colorsArray[randomColorIndex]}`);
+
 
 
 document.querySelector('#cards').onclick = () => {
