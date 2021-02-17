@@ -44,6 +44,12 @@ body {
     flex-flow:column nowrap;
     justify-content:center;
     align-items:center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 #cards li h2 {

@@ -249,7 +249,7 @@ export let questions =[{
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What was it like growing up as the youngest/oldest/middle/only child?",
+        "question": "What was it like growing up as the youngest /oldest /middle /only child?",
         "type": "Family",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
