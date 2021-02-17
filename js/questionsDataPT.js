@@ -75,91 +75,92 @@ export let questions =[{
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What's your favorite board game?",
+        "question": "Qual é o teu jogo de tabuleiro favorito?",
         "type": "Likes and Dislikes",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "Is there any product that you couldn't live without?",
+        "question": "Existe alguma coisa (material) sem a qual não conseguirias viver?",
         "type": "Likes and Dislikes",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What would be the first thing you'd do if you won the lottery?",
+        "question": "Qual seria a primeira coisa que farias se ganhasses a lotaria?",
         "type": "Likes and Dislikes",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What’s your favorite thing about your current job?",
+        "question": "Qual é o tu aspeto favorito em relação ao teu trabalho atual?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "If you could have any exotic animal as a pet, which would it be?",
+        "question": "Se pudesses ter qualquer animal exótico como animal de estimação, qual seria?",
         "type": "Likes and Dislikes",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What’s the career highlight you’re most proud of?",
+        "question": "O que te orgulha mais em relação à tua carreira atual? Qual foi o teu ponto mais alto?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "Are you more of a 'work to live' or a 'live to work' type of person?",
+        "question": "Que tipo de pessoa és, viver para trabalhar ou trabalhar para viver?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
-    }, {
+    }, 
+    {
         "question": "Do you think you’ll stay in your current gig awhile? Why or why not?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "How would your 10-year-old self react to what you do now?",
+        "question": "Como é que o teu 'tu' de 10 anos reagiria se soubesse qual o teu trabalho hoje?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What do you remember most about your first job?",
+        "question": "O que te recordas mais sobre o teu primeiro trabalho?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What’s the worst job you’ve ever had?",
+        "question": "Qual foi o pior trabalho que já tiveste?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "Have you ever had a side hustle or considered having one?",
+        "question": "Já alguma vez tiveste um segundo trabalho (side hustle), ou pensaste em ter um?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What originally got you interested in your current field of work?",
+        "question": "O que te interessou originalmente no teu trabalho atual?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What career advice would you give to your younger self?",
+        "question": "Que conselho darias ao teu 'eu' mais novo?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "How do you separate your work life from your home life?",
+        "question": "Como separas a tua vida dot teu trabalho?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "When will you know you've 'made it'?",
+        "question": "Como é que vais saber que já 'conseguiste chegar ao topo', em termos de carreira?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "Have you ever had 'imposter syndrome'?",
+        "question": "Já tiveste o 'sindrome de impostor'?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
     {
-        "question": "What do you think about workaholics?",
+        "question": "Qual é a tua opinião sobre 'viciados em trabalho'?",
         "type": "Career",
         "source": "https://www.womenshealthmag.com/life/a22500573/questions-to-ask-to-get-to-know-someone/"
     },
