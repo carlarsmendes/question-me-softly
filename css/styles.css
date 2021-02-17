@@ -39,12 +39,11 @@ body {
 	line-height: 2.5rem;
 	font-size: 2rem;
 	top: 0;
-  left: 0;
-  display:flex;
-  flex-flow:column nowrap;
-  justify-content:center;
-  align-items:center;
-  /*display:none;*/
+    left: 0;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
 }
 
 #cards li h2 {
@@ -64,9 +63,7 @@ body {
 }
 
 #cards li h5 {
-
     font-weight:500;
-    
 }
 
 #cards li#startingQuestion {
@@ -104,15 +101,10 @@ body {
   display:none;
   background-color: #3f3f3f;
   width:100vw;
-  /*height:auto;*/
   min-height:100vh;
   z-index:3;
   color:#fff;
-  /*border-radius:1rem;*/
   position:absolute;
-  /*overflow-y: scroll;*/
-  /*top:40px;
-  left:20px;*/
   padding:0px 20px 0px;
   margin:0px auto;
   font-size:18px;

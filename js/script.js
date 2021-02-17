@@ -1,7 +1,7 @@
 //Import all the types and respective colors
 import { colorsData } from './colorsData.js';
 //Import all the questions
-import { questions } from './questionsData.js';
+import { questions } from './questionsDataEN.js';
 
 let questionArray = [...questions];
 //An array with only the colors
