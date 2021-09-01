@@ -54,10 +54,8 @@ body {
 
 #cards li h2 {
 	line-height: 3rem;
-
 	top: 0;
-	left: 0;
-  
+	left: 0; 
 }
 
 #cards li h4 {
@@ -76,23 +74,32 @@ body {
   display:flex;
 }
 
-
-#questionMark {
-  font-size: 2.5rem;
-  border-radius: 4rem;
-  background-color: #3f3f3f;
-  color:#fff;
-  padding:15px 30px;
-  position:fixed;
-  right:0;
-  top:0;
-  margin:20px;
-  z-index:4;
-  text-align:center;
-  cursor: pointer;
+.rounded-circle {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background-color: #3f3f3f;
+    color:#fff;
+    padding:15px 30px;
+    position:fixed;   
+    text-align:center;
+    cursor: pointer;
+    z-index:4;
 }
 
-#questionMark.showModal {
+#filter {
+    right:0;
+    top:0;
+    margin:20px;
+ 
+}
+
+#help {
+  right:0;
+  bottom:0;
+  margin:20px;
+}
+
+#help.showModal {
   font-size: 2.5rem;
   border-radius: 0;
   padding:15px 30px;
@@ -103,7 +110,7 @@ body {
   text-align: right;
 }
 
-#helpModal {
+.fullscreen-modal {
   display:none;
   background-color: #3f3f3f;
   width:100vw;
@@ -121,7 +128,7 @@ body {
   align-items: center;
 }
 
-#helpModal .content {
+.fullscreen-modal .content {
   max-width:70vw;
   margin:0 auto;
   text-align:left;
@@ -130,7 +137,7 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-  #helpModal {
+  .fullscreen-modal {
     height:auto;
     padding:50px 20px;
     margin:0px auto;
@@ -142,7 +149,7 @@ body {
     align-items: center;
   }
   
-  #helpModal .content {
+  .fullscreen-modal .content {
     max-width:95vw;
     font-size:22px;
     line-height:28px;
@@ -152,6 +159,10 @@ body {
   #cards li {
     padding: 120px 0;
     max-width:85vw;
+  }
+
+  .filter-content, .help-content {
+      display:none;
   }
 
   

@@ -6,6 +6,7 @@ import { questions } from './questionsDataEN.js';
 let questionArray = [...questions];
 //An array with only the colors
 let colorsArray = colorsData.map(colorObject=> colorObject.color);
+let typesArray = colorsData.map(data=> data.type);
 
 var ul = document.getElementById("cards");
 
@@ -51,25 +52,81 @@ document.querySelector('#cards').onclick = () => {
 
 
 //For the help modal - Changes from '?' to '-' on click
-let questionMark = document.querySelector('#questionMark');
+let roundedCircleElements = document.querySelectorAll('.rounded-circle');
 
-questionMark.onclick = () => {
+roundedCircleElements.forEach((element)=>
 
-    let helpModal = document.querySelector('#helpModal');
+    element.onclick = () => {
+        
+        console.log("click on .round circle");
 
-    if (questionMark.classList.contains('showModal')) {
-        questionMark.classList.remove('showModal');
-        helpModal.style.display = "none";
-        questionMark.innerHTML = "?";
+        let helpModal = document.querySelector('.fullscreen-modal');
 
-    } else {
+        if (element.classList.contains('showModal')) {
+            element.classList.remove('showModal');
+            helpModal.style.display = "none";
 
-        questionMark.classList.add('showModal');
-        helpModal.style.display = "flex";
-        questionMark.innerHTML = "x";
-    }
-};
+                if( element.classList.contains('filter') ){
 
+                element.innerHTML = "+";
+                document.querySelector(".filter-content").style.display="inline";
+                
+            } else {
+                    element.innerHTML = "?";
+                    document.querySelector(".help-content").style.display="inline";
+                }
+
+        } else {
+
+            element.classList.add('showModal');
+            helpModal.style.display = "flex";
+            element.innerHTML = "x";
+
+            if( element.classList.contains('filter') ){
+
+                
+                document.querySelector(".filter-content").style.display="none";
+                
+            } else {
+                   
+                    document.querySelector(".help-content").style.display="none";
+                }
+
+        }
+
+    });
+
+    console.log("typesArray", typesArray);
+
+    typesArray.forEach(
+        (category) => {
+            let checkboxesContainer = document.querySelector(".checkboxes--container");
+
+
+            let p = document.createElement('p');
+
+            checkboxesContainer.appendChild(p);            
+            
+            let input = document.createElement('input');// Create n input element
+            input.classList.add("checkbox");
+            input.type = "checkbox";
+            input.id = category;
+            //input.label = category;
+
+            let label = document.createElement('label');// Create n input element
+            label.for = category;
+            label.textContent = category;
+            //console.log("input", input.createAttribute("type"));
+            //let category = document.createTextNode(type);// Create a text node
+            
+            //
+            //li.appendChild(question);
+            p.appendChild(label);
+            p.appendChild(input);
+            //checkboxesContainer.appendChild(category);
+
+        }
+    );
 //From Stack Overflow - Get contrast right depending on color
 //Outputs white or black for font color
 
